@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='gemStore'>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+</head>
+<body>
+	<div ng-controller="StoreController as store">
+		<div ng-repeat=" product in store.products">
+			<h1>{{product.name}}</h1>
+			<h2>{{product.price}}</h2>
+			<p>{{product.desc}}</p>
+			<button ng-show="product.canPurchase">Add to cart</button>
+			<div ng-hide="product.canPurchase">Out Of Order</div>
+		</div>
+	</div>
+	<!--nao funciona usar o store aqui pq isso seria fora do seu escopo -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
+
