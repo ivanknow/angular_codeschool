@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app='pessoaApp'>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<title>Filters -  4.1 - ng-include</title>
+</head>
+<body>
+	<div ng-controller="PessoaController as pessoaCtrl">
+		<div ng-repeat=" pessoa in  pessoaCtrl.pessoas">
+			<div ng-include="'pessoa.html'"></div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
+
